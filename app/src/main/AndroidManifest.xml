@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Citizen"></activity>
+        <activity android:name=".NearByHospitals"></activity>
+        <activity android:name=".Citizen" />
         <activity
             android:name=".ui.login.PoliceLogin"
             android:label="@string/title_activity_police_login" />
