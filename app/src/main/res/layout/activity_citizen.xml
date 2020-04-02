@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Citizen">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
@@ -16,7 +16,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="60dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
 
             >
 
@@ -35,5 +36,5 @@
                 android:layout_height="wrap_content"
                 android:text="Nearby hospitals" />
         </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
