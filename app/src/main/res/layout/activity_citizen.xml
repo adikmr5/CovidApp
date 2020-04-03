@@ -22,11 +22,12 @@
             >
 
             <Button
+                android:id="@+id/btncitizen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
                 android:text="I have symptoms"
-                android:textColor="#FFFF"
-                android:background="@color/colorAccent"/>
+                android:textColor="#FFFF" />
             <Button
 
             android:layout_width="match_parent"
