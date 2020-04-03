@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void police(View view){
+        Intent i=new Intent(getApplicationContext(), police.class);
+        startActivity(i);
 
     }
 }
