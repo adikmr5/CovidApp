@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Helping"></activity>
+        <activity android:name=".Volunteer"></activity>
+        <activity android:name=".Helping" />
         <activity android:name=".police" />
         <activity android:name=".actvityDetails" />
         <activity android:name=".NearByHospitals" />
