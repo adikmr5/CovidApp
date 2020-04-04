@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Report"></activity>
+        <activity android:name=".CompToPolice"></activity>
+        <activity android:name=".Report" />
         <activity android:name=".Volunteer" />
         <activity android:name=".Helping" />
         <activity android:name=".police" />
