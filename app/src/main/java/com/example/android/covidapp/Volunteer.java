@@ -3,6 +3,7 @@ package com.example.android.covidapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,10 +44,12 @@ public class Volunteer extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             Toast.makeText(Volunteer.this,"you are registered",Toast.LENGTH_SHORT).show();
+
                         }
                         else
                         {
-                            Toast.makeText(Volunteer.this,"Error Occurred",Toast.LENGTH_SHORT).show();
+                            String message=task.getException().toString();
+                            Toast.makeText(Volunteer.this,"Error Occurred"+message,Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

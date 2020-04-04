@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
     public void citizen(View view){
         Intent activity2Intent = new Intent(getApplicationContext(), Citizen.class);
@@ -27,9 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void volunteer(View view)
+    public void help(View view)
     {
-        Intent j=new Intent(getApplicationContext(),Volunteer.class);
+        Intent j=new Intent(getApplicationContext(), Report.class);
         startActivity(j);
     }
+
+
+
+
+
+
 }
