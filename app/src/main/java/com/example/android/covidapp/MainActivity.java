@@ -26,4 +26,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
 
     }
+    public void volunteer(View view)
+    {
+        Intent j=new Intent(getApplicationContext(),Volunteer.class);
+        startActivity(j);
+    }
 }

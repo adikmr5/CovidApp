@@ -36,6 +36,11 @@ public class police extends AppCompatActivity {
         ref= FirebaseDatabase.getInstance().getReference().child("police");
         member=new Members();
 
+
+
+
+
+
         autha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
