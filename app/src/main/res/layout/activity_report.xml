@@ -21,8 +21,8 @@
 
     <EditText
         android:id="@+id/etcom"
-        android:layout_width="377dp"
-        android:layout_height="190dp"
+        android:layout_width="365dp"
+        android:layout_height="169dp"
         android:hint="Enter your complain here"
         android:inputType="text|textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,6 +69,7 @@
         app:layout_constraintHorizontal_bias="0.402"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etlocal" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
