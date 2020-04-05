@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.android.covidapp.ui.login.DownloadURL;
 import com.google.android.gms.common.api.ResolvableApiException;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -55,7 +56,7 @@ public class NearByHospitals extends AppCompatActivity implements OnMapReadyCall
     private List<AutocompletePrediction> predictionList;
 
     private Location lastl;
-    private int ProximityRadius = 10000;
+    private int ProximityRadius = 7000;
 
     private LocationCallback locationCallback;
 
@@ -126,6 +127,9 @@ public class NearByHospitals extends AppCompatActivity implements OnMapReadyCall
         });
 
 
+
+
+
 //        //from here i'm starting
 //
 //        String hospital="hospitals";
@@ -142,12 +146,11 @@ public class NearByHospitals extends AppCompatActivity implements OnMapReadyCall
     }
 
     private String getUrl(double latitude, double longitude, String hospital) {
-        StringBuilder googleURL = new StringBuilder("https://maps.googleapis.com/maps/api/place/findplacefromtext/json?");
+        StringBuilder googleURL = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
 
         googleURL.append("location=" + latitude + "," + longitude);
         googleURL.append("&radius=" + ProximityRadius);
         googleURL.append("&type=" + hospital);
-        googleURL.append("&sensor=true");
         googleURL.append("&sensor=true");
         googleURL.append("&key=" + "AIzaSyDYl1NI-UuFp9GgIpby35ND5xkjAxb2OwA");
 
@@ -174,6 +177,8 @@ public class NearByHospitals extends AppCompatActivity implements OnMapReadyCall
                         if (task.isSuccessful()) {
 
                             lastl = task.getResult();
+                            latitude=lastl.getLatitude();
+                            longitude=lastl.getLongitude();
                             if (lastl != null) {
                                 mMap.moveCamera((CameraUpdateFactory.newLatLngZoom(new LatLng(lastl.getLatitude(), lastl.getLongitude()), DEFAULT_ZOOM)));
                             } else {
@@ -212,12 +217,16 @@ public class NearByHospitals extends AppCompatActivity implements OnMapReadyCall
         mMap.clear();
         String hospital = "hospital";
 
+
         String url = getUrl(latitude,longitude,hospital);
         dataTransfer[0] = mMap;
         dataTransfer[1] = url;
 
         getNearbyPlacesData.execute(dataTransfer);
         Toast.makeText(NearByHospitals.this, "Showing Nearby Hospitals", Toast.LENGTH_SHORT).show();
+        String data=getNearbyPlacesData.getGooglePlacesData();
+
+
     }
 
 }

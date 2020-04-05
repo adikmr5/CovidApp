@@ -14,10 +14,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-
 class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
 
-    private String googlePlacesData;
+    public String googlePlacesData;
     private GoogleMap mMap;
     String url;
 
@@ -61,11 +60,15 @@ class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
             LatLng latLng = new LatLng( lat, lng);
             markerOptions.position(latLng);
             markerOptions.title(placeName + " : "+ vicinity);
-            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE));
 
             mMap.addMarker(markerOptions);
             mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
             mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
         }
+    }
+
+    public String getGooglePlacesData() {
+        return googlePlacesData;
     }
 }
