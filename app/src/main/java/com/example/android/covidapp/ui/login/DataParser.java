@@ -63,6 +63,7 @@ public class DataParser {
             try {
                 placeMap = getPlace((JSONObject) jsonArray.get(i));
                 placelist.add(placeMap);
+                System.out.println(placelist);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
