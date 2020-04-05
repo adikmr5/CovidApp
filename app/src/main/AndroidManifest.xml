@@ -18,6 +18,9 @@
         <activity android:name=".Helping" />
         <activity android:name=".police" />
         <activity android:name=".actvityDetails" />
+        <activity android:name=".afterVerify"/>
+        <activity android:name=".phoneVerify"/>
+        <activity android:name=".phoneLogin"/>
         <activity android:name=".NearByHospitals" />
         <activity android:name=".Citizen" />
         <activity android:name=".MainActivity">
