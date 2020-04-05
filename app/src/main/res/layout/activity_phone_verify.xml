@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".phoneVerify"
+    android:orientation="vertical"
+    android:padding="30sp">>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Enter the code to proceed with the verification"
+        android:layout_marginTop="50sp"
+        android:layout_marginBottom="50sp"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="192dp"
+        android:textSize="21sp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/textcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:layout_marginBottom="50sp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="OTP received"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btndone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:layout_marginBottom="50sp"
+        android:text="DONE"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="74dp"
+        android:layout_height="59dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="140sp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GO BACK" />
+</LinearLayout>
