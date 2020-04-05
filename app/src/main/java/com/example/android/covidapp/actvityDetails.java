@@ -65,7 +65,6 @@ public class actvityDetails extends AppCompatActivity {
 
 
                 reff.push().setValue(patient);
-                Toast.makeText(actvityDetails.this,"data inserted successfully",Toast.LENGTH_LONG).show();
 
             }
         });

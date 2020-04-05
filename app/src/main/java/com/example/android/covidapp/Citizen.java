@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.view.View;
 
 public class Citizen extends AppCompatActivity {
-    public Button button;
+    public Button button,btnreport;
 
 
     @Override
@@ -21,6 +21,14 @@ public class Citizen extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(Citizen.this,actvityDetails.class);
                 startActivity(intent);
+            }
+        });
+        btnreport=(Button)findViewById(R.id.btnreport);
+        btnreport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentnew=new Intent (Citizen.this,phoneLogin.class);
+                startActivity(intentnew);
             }
         });
     }
