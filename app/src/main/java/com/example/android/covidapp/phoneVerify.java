@@ -82,7 +82,7 @@ public class phoneVerify extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            Intent intentneww=new Intent(phoneVerify.this,afterVerify.class);
+                            Intent intentneww=new Intent(phoneVerify.this,Report.class);
                             startActivity(intentneww);
 
                         }

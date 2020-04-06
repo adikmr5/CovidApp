@@ -27,12 +27,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
 
     }
-    public void volunteer(View view){
-        Intent k=new Intent(getApplicationContext(), Volunteer.class);
-        startActivity(k);
 
-
-    }
 
     public void help(View view)
     {
