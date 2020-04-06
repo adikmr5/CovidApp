@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.covidapp">
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,21 +13,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CitizenLogin"></activity>
+        <activity android:name=".CitizenRegister" />
+        <activity android:name=".page" />
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDYl1NI-UuFp9GgIpby35ND5xkjAxb2OwA" />
 
-        <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDYl1NI-UuFp9GgIpby35ND5xkjAxb2OwA"
-            ></meta-data>
-
-        <activity android:name=".NearByHospitals"></activity>
+        <activity android:name=".NearByHospitals" />
         <activity android:name=".Citizen" />
-       <activity android:name=".CompToPolice"/>
-        <activity android:name=".Report"/>
-        <activity android:name=".Helping"/>
-        <activity android:name=".police"/>
-        <activity android:name=".actvityDetails"/>
-        <activity android:name=".phoneVerify"/>
-        <activity android:name=".phoneLogin"/>
+        <activity android:name=".CompToPolice" />
+        <activity android:name=".Report" />
+        <activity android:name=".Helping" />
+        <activity android:name=".police" />
+        <activity android:name=".actvityDetails" />
+        <activity android:name=".phoneVerify" />
+        <activity android:name=".phoneLogin" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

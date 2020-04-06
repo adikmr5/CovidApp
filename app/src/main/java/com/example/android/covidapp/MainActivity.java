@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void citizen(View view){
-        Intent activity2Intent = new Intent(getApplicationContext(), Citizen.class);
+        Intent activity2Intent = new Intent(getApplicationContext(), page.class);
         startActivity(activity2Intent);
     }
 
