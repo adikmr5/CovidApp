@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Citizen">
 
     <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Call Helpline"
+        android:onClick="call"
+        />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -22,24 +28,21 @@
             >
 
             <Button
-                android:id="@+id/btncitizen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
                 android:text="I have symptoms"
-                android:textColor="#FFFF" />
-
+                />
             <Button
 
-                android:id="@+id/btnreport"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Report anonymously for patient" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Report anonymously for patient" />
             <Button
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nearby hospitals" />
+                android:text="Nearby hospitals"
+                android:onClick="nearbyHospital"
+                android:id="@+id/nearHospital"/>
         </LinearLayout>
     </RelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
