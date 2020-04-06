@@ -16,6 +16,15 @@
         android:text="Call Helpline"
         android:onClick="call"
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="back"
+        android:onClick="back"
+        />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -27,23 +36,23 @@
 
             >
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="I have symptoms"
-                android:id="@+id/btnsymp"
-                />
-            <Button
-            android:id="@+id/btnrepo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Report anonymously for patient" />
+
             <Button
 
+                android:id="@+id/nearHospital"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nearby hospitals"
+                android:layout_height="130dp"
                 android:onClick="nearbyHospital"
-                android:id="@+id/nearHospital"/>
+                android:text="I HAVE SYMPTOMS"
+                android:textSize="14sp" />
+
+
+            <Button
+                android:id="@+id/btnrepo"
+                android:layout_width="321dp"
+                android:layout_height="125dp"
+                android:text="Report for hidden patients/unwanted
+                 gatherings"
+                android:textSize="14sp" />
         </LinearLayout>
     </RelativeLayout>

@@ -8,6 +8,7 @@ package com.example.android.covidapp;
       private Integer age;
       private Long phone;
       private String gender;
+      private String Hospitalname;
 
       public Patient() {
       }
@@ -17,6 +18,8 @@ package com.example.android.covidapp;
 
           return name;
       }
+
+
 
       public void setName(String name) {
 
@@ -77,5 +80,13 @@ package com.example.android.covidapp;
 
       public void setGender(String gender) {
           this.gender = gender;
+      }
+
+      public String getHospitalname() {
+          return Hospitalname;
+      }
+
+      public void setHospitalname(String hospitalname) {
+          Hospitalname = hospitalname;
       }
   }

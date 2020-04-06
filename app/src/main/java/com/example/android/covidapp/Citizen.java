@@ -30,7 +30,7 @@ public class Citizen extends AppCompatActivity {
 
     private Button btnGrant;
     private Button repo;
-    private Button sympt;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class Citizen extends AppCompatActivity {
 
         btnGrant = findViewById(R.id.nearHospital);
         repo=findViewById(R.id.btnrepo);
-        sympt=findViewById(R.id.btnsymp);
+
         btnGrant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,13 +86,7 @@ public class Citizen extends AppCompatActivity {
 
         });
 
-        sympt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent q=new Intent(Citizen.this,actvityDetails.class);
-                startActivity(q);
-            }
-        });
+
     }
 
     public void nearbyHospital(View view) {
@@ -106,4 +100,11 @@ public class Citizen extends AppCompatActivity {
         intent.setData(Uri.parse("tel:1075"));
         startActivity(intent);
     }
+
+    public void back(View view)
+    {
+        Intent t=new Intent(Citizen.this,MainActivity.class);
+        startActivity(t);
+    }
+
 }

@@ -6,6 +6,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -40,10 +41,14 @@ import java.util.List;
 
 public class NearByHospitals extends AppCompatActivity implements OnMapReadyCallback {
 
+
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocation;
     private PlacesClient placesClient;
     private List<AutocompletePrediction> predictionList;
+
+    Button showt;
+    Button back;
 
     private Location lastl;
     private int ProximityRadius = 7000;
@@ -59,6 +64,8 @@ public class NearByHospitals extends AppCompatActivity implements OnMapReadyCall
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_near_by_hospitals);
+        showt=findViewById(R.id.button1);
+        back=findViewById(R.id.buttonback);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         mapView = mapFragment.getView();
@@ -67,6 +74,21 @@ public class NearByHospitals extends AppCompatActivity implements OnMapReadyCall
         placesClient = Places.createClient(this);
         AutocompleteSessionToken token = AutocompleteSessionToken.newInstance();
 
+        showt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent m=new Intent(NearByHospitals.this,actvityDetails.class);
+                startActivity(m);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent g=new Intent(NearByHospitals.this,Citizen.class);
+                startActivity(g);
+            }
+        });
         //startSearch("Hospitals",true,null,true);
     }
 

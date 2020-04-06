@@ -25,11 +25,29 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show"
         android:onClick="onClick"
+        android:text="show hospitals near me"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16sp"
+        android:layout_marginBottom="100sp"
         />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50sp"
+        android:text="GO TO FORM" />
+
+    <Button
+        android:id="@+id/buttonback"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0sp"
+        android:text="Back" />
 
 </RelativeLayout>

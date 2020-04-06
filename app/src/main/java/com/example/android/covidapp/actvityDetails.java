@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 
 public class actvityDetails extends AppCompatActivity {
-    EditText dname,dage,dtravel,dresp,dphyc,dcontact,dgender;
+    EditText dname,dage,dtravel,dresp,dphyc,dcontact,dgender,hospitalNmae;
     RadioButton dmale,dfemale;
     RadioGroup radio;
     Button btnnext;
@@ -27,6 +27,7 @@ public class actvityDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actvity_details);
+        hospitalNmae=findViewById(R.id.hosname);
         dname=(EditText)findViewById(R.id.dname);
         radio=(RadioGroup)findViewById(R.id.radio);
         dage=(EditText)findViewById(R.id.dage);
@@ -45,6 +46,7 @@ public class actvityDetails extends AppCompatActivity {
 
 
                 patient.setName(dname.getText().toString().trim());
+                patient.setHospitalname(hospitalNmae.getText().toString().trim());
                 int agee=Integer.parseInt(dage.getText().toString().trim());
                 Long phn=Long.parseLong(dcontact.getText().toString().trim());
                 patient.setAge(agee);
