@@ -1,23 +1,18 @@
 package com.example.android.covidapp;
 
+import android.content.Intent;
+import android.content.IntentSender;
+import android.location.Location;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.content.IntentSender;
-import android.location.Address;
-import android.location.Geocoder;
-import android.location.Location;
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
-
-import com.example.android.covidapp.ui.login.DownloadURL;
 import com.google.android.gms.common.api.ResolvableApiException;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -27,25 +22,20 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResponse;
 import com.google.android.gms.location.SettingsClient;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.libraries.places.api.Places;
-import com.google.android.libraries.places.api.internal.impl.net.pablo.PlaceResult;
 import com.google.android.libraries.places.api.model.AutocompletePrediction;
 import com.google.android.libraries.places.api.model.AutocompleteSessionToken;
 import com.google.android.libraries.places.api.net.PlacesClient;
 
-import java.io.IOException;
 import java.util.List;
 
 public class NearByHospitals extends AppCompatActivity implements OnMapReadyCallback {

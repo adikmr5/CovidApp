@@ -31,9 +31,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="I have symptoms"
+                android:id="@+id/btnsymp"
                 />
             <Button
-
+            android:id="@+id/btnrepo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Report anonymously for patient" />

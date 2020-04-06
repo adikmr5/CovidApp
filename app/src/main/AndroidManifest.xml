@@ -19,9 +19,13 @@
 
         <activity android:name=".NearByHospitals"></activity>
         <activity android:name=".Citizen" />
-        <activity
-            android:name=".ui.login.PoliceLogin"
-            android:label="@string/title_activity_police_login" />
+       <activity android:name=".CompToPolice"/>
+        <activity android:name=".Report"/>
+        <activity android:name=".Helping"/>
+        <activity android:name=".police"/>
+        <activity android:name=".actvityDetails"/>
+        <activity android:name=".phoneVerify"/>
+        <activity android:name=".phoneLogin"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

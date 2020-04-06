@@ -65,6 +65,7 @@ public class actvityDetails extends AppCompatActivity {
 
 
                 reff.push().setValue(patient);
+                Toast.makeText(actvityDetails.this,"Your Value is Added",Toast.LENGTH_SHORT).show();
 
             }
         });
