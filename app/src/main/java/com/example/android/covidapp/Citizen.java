@@ -1,5 +1,6 @@
 package com.example.android.covidapp;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,16 +8,29 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.android.covidapp.data.model.LoggedInUser;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
@@ -30,6 +44,14 @@ public class Citizen extends AppCompatActivity {
 
     private Button btnGrant;
     private Button repo;
+    private TextView unam;
+
+    FirebaseUser firebaseUser;
+    DatabaseReference dareff;
+
+
+
+
 
 
     @Override
@@ -37,8 +59,35 @@ public class Citizen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citizen);
 
+
+        Toolbar tbar=findViewById(R.id.toolbar);
+
         btnGrant = findViewById(R.id.nearHospital);
         repo=findViewById(R.id.btnrepo);
+        unam=findViewById(R.id.txtusername);
+
+        firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
+        dareff=FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
+
+        dareff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Users users=dataSnapshot.getValue(Users.class);
+                unam.setText(users.getUsername());
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+
+
 
         btnGrant.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +136,26 @@ public class Citizen extends AppCompatActivity {
         });
 
 
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(Citizen.this,MainActivity.class));
+                finish();
+                return true;
+        }
+        return false;
     }
 
     public void nearbyHospital(View view) {
