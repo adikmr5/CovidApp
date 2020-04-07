@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BCB7B7"
     tools:context=".MessageActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -21,5 +22,38 @@
         android:text=""
         android:textSize="25sp"
         />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:id="@+id/review"
+        android:layout_below="@+id/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom"
+        android:padding="5dp"
+        android:background="#fff"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtsend"
+            android:background="@android:color/transparent"
+            android:hint="Type a Message...."
+
+            android:layout_toLeftOf="@id/btnsend"
+            android:layout_centerVertical="true"/>
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_action_name"
+            android:id="@+id/btnsend"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
 
 </RelativeLayout>
