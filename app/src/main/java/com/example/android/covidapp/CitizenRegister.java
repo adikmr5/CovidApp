@@ -59,6 +59,8 @@ public class CitizenRegister extends AppCompatActivity {
                 }
                 else
                 {
+                    Toast.makeText(CitizenRegister.this,"Just wait for few seconds",Toast.LENGTH_SHORT).show();
+
                     register(txt_username,txt_email,txt_password);
                 }
             }

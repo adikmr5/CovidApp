@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:id="@+id/toolbar"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/quantum_cyan200"
         />
     <TextView
         android:id="@+id/txt"
@@ -43,6 +43,9 @@
         android:text="Call Helpline"
         android:onClick="call"
         />
+
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,6 +74,16 @@
                 android:layout_height="130dp"
                 android:onClick="nearbyHospital"
                 android:text="I HAVE SYMPTOMS"
+                android:textSize="14sp" />
+
+            <Button
+
+                android:id="@+id/chat"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:onClick="nearbyHospital"
+                android:text="CHAT WITH MEDICAL
+                REPRESENTATIVE"
                 android:textSize="14sp" />
 
 
