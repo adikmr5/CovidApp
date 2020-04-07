@@ -44,6 +44,7 @@ public class Citizen extends AppCompatActivity {
 
     private Button btnGrant;
     private Button repo;
+    private Button chating;
     private TextView unam;
 
     FirebaseUser firebaseUser;
@@ -65,6 +66,7 @@ public class Citizen extends AppCompatActivity {
         btnGrant = findViewById(R.id.nearHospital);
         repo=findViewById(R.id.btnrepo);
         unam=findViewById(R.id.txtusername);
+        chating=findViewById(R.id.chat);
 
         firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
         dareff=FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
@@ -73,6 +75,7 @@ public class Citizen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Users users=dataSnapshot.getValue(Users.class);
+                assert users != null;
                 unam.setText(users.getUsername());
 
 
@@ -133,6 +136,14 @@ public class Citizen extends AppCompatActivity {
                 startActivity(k);
             }
 
+        });
+
+        chating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent o=new Intent(Citizen.this,Chat.class);
+                startActivity(o);
+            }
         });
 
 
