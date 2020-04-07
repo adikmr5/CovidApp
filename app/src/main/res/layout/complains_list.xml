@@ -24,7 +24,7 @@
     <TextView
         android:id="@+id/txtcomplainshow"
         android:layout_width="match_parent"
-        android:layout_height="155dp"
+        android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="Complain"
         android:textSize="16dp" />
@@ -44,6 +44,11 @@
         android:text="From Location"
         android:padding="5dp"
         android:textSize="16dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2sp"
+        android:background="#c0c0c0"
         />
 
 </LinearLayout>

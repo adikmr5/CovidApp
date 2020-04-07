@@ -13,12 +13,29 @@ import com.google.firebase.auth.FirebaseUser;
 public class page extends AppCompatActivity {
     Button Register, Login;
 
+    FirebaseUser firebaseUser;
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
+        if(firebaseUser!=null)
+        {
+            Intent k=new Intent(page.this,Citizen.class);
+            startActivity(k);
+            finish();
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page);
+
+
+
+
 
 
 

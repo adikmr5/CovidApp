@@ -14,10 +14,14 @@ import android.provider.Settings;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.covidapp.data.model.LoggedInUser;
 import com.google.firebase.auth.FirebaseAuth;
@@ -40,6 +44,12 @@ public class Citizen extends AppCompatActivity {
 
     private Button btnGrant;
     private Button repo;
+    private TextView unam;
+
+    FirebaseUser firebaseUser;
+    DatabaseReference dareff;
+
+
 
 
 
@@ -49,8 +59,30 @@ public class Citizen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citizen);
 
+
+        Toolbar tbar=findViewById(R.id.toolbar);
+
         btnGrant = findViewById(R.id.nearHospital);
         repo=findViewById(R.id.btnrepo);
+        unam=findViewById(R.id.txtusername);
+
+        firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
+        dareff=FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
+
+        dareff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Users users=dataSnapshot.getValue(Users.class);
+                unam.setText(users.getUsername());
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
 
 
@@ -104,6 +136,26 @@ public class Citizen extends AppCompatActivity {
         });
 
 
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(Citizen.this,MainActivity.class));
+                finish();
+                return true;
+        }
+        return false;
     }
 
     public void nearbyHospital(View view) {
