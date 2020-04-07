@@ -1,6 +1,7 @@
 package com.example.android.covidapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,9 +36,18 @@ public class UserAdapt extends RecyclerView.Adapter<UserAdapt.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        Users uss=this.users.get(position);
+        final Users uss=this.users.get(position);
 
         holder.textName.setText(uss.getUsername());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(context,MessageActivity.class);
+                i.putExtra("userid",uss.getId());
+                context.startActivity(i);
+            }
+        });
 
     }
 
