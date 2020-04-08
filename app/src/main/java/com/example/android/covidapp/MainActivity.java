@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void citizen(View view){
-        Intent activity2Intent = new Intent(getApplicationContext(), page.class);
+        Intent activity2Intent = new Intent(getApplicationContext(), CitizenLoginOrRegister.class);
         startActivity(activity2Intent);
         FirebaseAuth.getInstance().signOut();
     }
@@ -40,10 +40,5 @@ public class MainActivity extends AppCompatActivity {
         Intent j=new Intent(getApplicationContext(), Report.class);
         startActivity(j);
     }
-
-
-
-
-
 
 }

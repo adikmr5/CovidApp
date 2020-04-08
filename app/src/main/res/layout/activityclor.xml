@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CitizenRegister">
-
+    tools:context=".CitizenLoginOrRegister">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,23 +17,14 @@
         android:id="@+id/welcome_text"
         ></TextView>
     <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Registration is easy"
-    android:layout_below="@+id/welcome_text"
-    android:layout_centerHorizontal="true"
-    android:textColor="#000000"
-    android:layout_marginTop="18dp"
-    android:id="@+id/message_text"
-    ></TextView>
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Just fill in the stuffs as asked below!"
-        android:layout_below="@+id/message_text"
+        android:text="Please Register or Sign In to continue"
+        android:layout_below="@+id/welcome_text"
         android:layout_centerHorizontal="true"
         android:textColor="#000000"
-        android:id="@+id/message_text_line2"
+        android:layout_marginTop="18dp"
+        android:id="@+id/message_text"
         ></TextView>
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,37 +32,38 @@
         android:layout_centerVertical="true"
         android:orientation="vertical"
         android:id="@+id/field_ll">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etmail"
+        android:hint="Enter Your email ID"
+        android:layout_below="@+id/message_text"
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"></EditText>
         <EditText
             android:layout_width="match_parent"
-            android:id="@+id/etname"
             android:layout_height="wrap_content"
-            android:hint="Enter Your Name"
-            android:layout_below="@+id/message_text"
-            android:layout_centerVertical="true"
-            android:layout_margin="20dp"></EditText>
-        <EditText
-            android:layout_width="match_parent"
-            android:id="@+id/etmail"
-            android:layout_height="wrap_content"
-            android:hint="Enter Your email-ID"
-            android:layout_margin="20dp"></EditText>
-        <EditText
-            android:layout_width="match_parent"
             android:id="@+id/etpass"
-            android:layout_height="wrap_content"
-            android:hint="Create a new Password"
+            android:hint="Enter Your Password"
             android:layout_margin="20dp"
             android:inputType="textPassword"></EditText>
 
     </LinearLayout>
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Login"
+    android:id="@+id/loginbut"
+    android:layout_below="@+id/field_ll"
+    android:layout_centerHorizontal="true"
+    ></Button>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Account and Login"
-        android:id="@+id/regbut"
-        android:layout_below="@+id/field_ll"
+        android:text="Don't have an account?\nRegister Now!"
+        android:layout_margin="20dp"
+        android:id="@+id/regbuttononmainpage"
+        android:layout_below="@+id/loginbut"
         android:layout_centerHorizontal="true"
         ></Button>
-
-
 </RelativeLayout>

@@ -61,7 +61,7 @@ public class Citizen extends AppCompatActivity {
         setContentView(R.layout.activity_citizen);
 
 
-        Toolbar tbar=findViewById(R.id.toolbar);
+
 
         btnGrant = findViewById(R.id.nearHospital);
         repo=findViewById(R.id.btnrepo);
