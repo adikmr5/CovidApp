@@ -34,24 +34,22 @@ public class UserAdapt extends RecyclerView.Adapter<UserAdapt.MyViewHolder> {
 
 
     @Override
-    public  void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        Users uss=this.users.get(position);
+        final Users uss=this.users.get(position);
 
         holder.textName.setText(uss.getUsername());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(context,MessageActivity.class);
-                intent.putExtra("userId",Users.getId());
-                context.startActivity(intent);
+            public void onClick(View v) {
+                Intent i=new Intent(context,MessageActivity.class);
+                i.putExtra("userid",uss.getId());
+                context.startActivity(i);
             }
         });
 
     }
-
-
 
     @Override
     public int getItemCount() {
