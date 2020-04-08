@@ -52,6 +52,7 @@ public class CitizenLogin extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
+                            Toast.makeText(CitizenLogin.this,"Just wait for a while",Toast.LENGTH_SHORT).show();
                             Intent g=new Intent(CitizenLogin.this,Citizen.class);
                             startActivity(g);
                             finish();

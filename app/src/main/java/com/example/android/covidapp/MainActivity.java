@@ -24,17 +24,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void citizen(View view){
 
-        if(FirebaseAuth.getInstance().getCurrentUser()==null) {
+
             FirebaseAuth.getInstance().signOut();
             Intent activity2Intent = new Intent(getApplicationContext(), CitizenLoginOrRegister.class);
             startActivity(activity2Intent);
-        }
-        else
-        {
-            Intent activity2Intent = new Intent(getApplicationContext(), Citizen.class);
-            startActivity(activity2Intent);
 
-        }
+
 
     }
 

@@ -46,49 +46,61 @@ public class actvityDetails extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                patient.setName(dname.getText().toString().trim());
-
-                patient.setHospitalname(hospitalNmae.getText().toString().trim());
-                int agee=Integer.parseInt(dage.getText().toString().trim());
-                Long phn=Long.parseLong(dcontact.getText().toString().trim());
-
-
-                if( TextUtils.isEmpty(dname.getText())) {
-
+                if (TextUtils.isEmpty(dname.getText())) {
                     dname.setError("Name is required!");
+                    Toast.makeText(actvityDetails.this, "Please fill your name", Toast.LENGTH_SHORT).show();
                     return;
-
                 }
-
-                if(TextUtils.isEmpty(dcontact.getText()))
+                else if (TextUtils.isEmpty(hospitalNmae.getText())) {
+                    hospitalNmae.setError("please enter your hospital name");
+                    Toast.makeText(actvityDetails.this, "Please fill Hospital name", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else if (TextUtils.isEmpty(dcontact.getText())) {
+                    dcontact.setError("please enter your contact details");
+                    Toast.makeText(actvityDetails.this, "Please fill your contact details", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else if (TextUtils.isEmpty(dname.getText()) || TextUtils.isEmpty(hospitalNmae.getText())|| radio.getCheckedRadioButtonId()==-1
+                        ||TextUtils.isEmpty(dcontact.getText()) || TextUtils.isEmpty(dage.getText())
+                || TextUtils.isEmpty(dcontact.getText()) || TextUtils.isEmpty(dresp.getText()) || TextUtils.isEmpty(dphyc.getText())
+                || (TextUtils.isEmpty(dmale.getText()) && TextUtils.isEmpty(dfemale.getText())))
                 {
-                    Toast.makeText(actvityDetails.this,"You need to enter phone number!",Toast.LENGTH_SHORT).show();
-                     return;
+                    Toast.makeText(actvityDetails.this, "Please Fill in the details", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+
+
+                    patient.setName(dname.getText().toString().trim());
+
+                    patient.setHospitalname(hospitalNmae.getText().toString().trim());
+                    int age = Integer.parseInt(dage.getText().toString());
+                    Long phn = Long.parseLong(dcontact.getText().toString().trim());
+
+
+                    patient.setAge(age);
+                    patient.setPhone(phn);
+                    String gender = "";
+                    if (dmale.isChecked()) {
+                        gender = "Male";
+                    }
+                    if (dfemale.isChecked()) {
+                        gender = "Female";
+                    }
+                    patient.setGender(gender.trim());
+
+                    patient.setTravel(dtravel.getText().toString().trim());
+                    patient.setIllness(dresp.getText().toString().trim());
+                    patient.setPhycontact(dphyc.getText().toString().trim());
+
+
+                    reff.push().setValue(patient);
+                    Toast.makeText(actvityDetails.this, "Your Value is Added", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(actvityDetails.this, afterSubmit.class);
+                    startActivity(intent);
+
+
                 }
-                patient.setAge(agee);
-                patient.setPhone(phn);
-                String gender="";
-                if(dmale.isChecked()) {
-                    gender = "Male";
-                }
-                if(dfemale.isChecked())
-                {
-                    gender="Female";
-                }
-                patient.setGender(gender.trim());
-
-                patient.setTravel(dtravel.getText().toString().trim());
-                patient.setIllness(dresp.getText().toString().trim());
-                patient.setPhycontact(dphyc.getText().toString().trim());
-
-
-                reff.push().setValue(patient);
-                Toast.makeText(actvityDetails.this,"Your Value is Added",Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(actvityDetails.this,afterSubmit.class);
-                startActivity(intent);
-
-
-
             }
         });
 

@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".police">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:text="This section can only be Accessed by authentic policeman of a particular area."
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50sp"
+        android:layout_margin="20dp"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/txtname"
@@ -14,12 +24,10 @@
         android:inputType="textPersonName"
         android:text=""
         android:hint="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.373"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.213" />
+        android:layout_marginTop="170sp"
+        android:layout_marginLeft="65sp"
+        android:layout_centerHorizontal="true"
+         />
 
     <EditText
         android:id="@+id/txtid"
@@ -29,12 +37,9 @@
         android:inputType="textPersonName"
         android:text=""
         android:hint="police unique id"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.373"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtname"
-        app:layout_constraintVertical_bias="0.078" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        />
 
     <EditText
         android:id="@+id/txtarea"
@@ -44,23 +49,15 @@
         android:inputType="textPersonName"
         android:text=""
         android:hint="Area under surveillance"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.373"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtid"
-        app:layout_constraintVertical_bias="0.125" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="330dp"/>
 
     <Button
         android:id="@+id/btna"
         android:layout_width="168dp"
         android:layout_height="48dp"
         android:text="AUTHENTICATE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtarea"
-        app:layout_constraintVertical_bias="0.45" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="440dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

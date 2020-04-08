@@ -7,20 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class afterSubmit extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
 
+public class AfterReport extends AppCompatActivity {
     Button back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_after_submit);
-
-        back=findViewById(R.id.btnbtc);
+        setContentView(R.layout.activity_after_report);
+        back=findViewById(R.id.btnb);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent j=new Intent(afterSubmit.this,Citizen.class);
-                startActivity(j);
+                FirebaseAuth.getInstance().signOut();
+                Intent i=new Intent(AfterReport.this,MainActivity.class);
+                startActivity(i);
             }
         });
     }

@@ -72,6 +72,7 @@ public class phoneVerify extends AppCompatActivity {
     private void verifyCode(String code){
         PhoneAuthCredential credential=PhoneAuthProvider.getCredential(verificationId,code);
                 signInWithCredential(credential);
+
     }
 
     private void signInWithCredential(PhoneAuthCredential credential) {
@@ -84,6 +85,7 @@ public class phoneVerify extends AppCompatActivity {
                         {
                             Intent intentneww=new Intent(phoneVerify.this,Report.class);
                             startActivity(intentneww);
+                            mAuth.signOut();
 
                         }
                         else

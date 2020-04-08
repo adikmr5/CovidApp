@@ -13,12 +13,15 @@
 
     <TextView
         android:id="@+id/uname"
-        android:layout_width="399dp"
-        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
         android:layout_marginRight="200dp"
         android:text="Username"
-        android:paddingLeft="30sp"
-        android:textSize="30sp" />
+        android:paddingLeft="20sp"
+        android:paddingTop="7dp"
+        android:textStyle="bold"
+        android:textFontWeight="@android:integer/config_longAnimTime"
+        android:textSize="22dp" />
 
     <View
         android:layout_width="match_parent"

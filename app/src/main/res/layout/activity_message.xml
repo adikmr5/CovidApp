@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BCB7B7"
+    android:background="#090909"
     tools:context=".MessageActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:id="@+id/toolbar"
         android:layout_height="wrap_content"
-        android:background="@color/quantum_cyan200"
+        android:background="@color/quantum_googgreen700"
         />
     <TextView
         android:id="@+id/txtusername"
@@ -20,7 +20,9 @@
         android:layout_marginLeft="50sp"
         android:layout_marginTop="10sp"
         android:text=""
-        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/quantum_white_100"
+        android:textSize="18dp"
         />
 
     <androidx.recyclerview.widget.RecyclerView
