@@ -133,22 +133,22 @@
         android:text="Foreign Travel History( Enter country)"
         android:textSize="17sp" />
 
-    <EditText
-        android:id="@+id/dtravel"
-        android:layout_width="match_parent"
 
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15sp"
-        android:hint="None"
-        android:inputType="text"
-        android:textSize="17sp" />
+        <EditText
+            android:id="@+id/dtravel"
+            android:layout_width="match_parent"
 
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15sp"
+            android:hint="None"
+            android:inputType="text"
+            android:textSize="17sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Respiratory Illness( dry cough)"
-        android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Respiratory Illness( dry cough)/Fever"
+            android:textSize="20sp" />
 
     <EditText
         android:id="@+id/dresp"
@@ -160,11 +160,11 @@
         android:inputType="text"
         android:textSize="17sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Close physical contact with nCoV case"
-        android:textSize="17sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close physical contact with nCoV case( yes/no)"
+            android:textSize="17sp" />
 
     <EditText
         android:id="@+id/dphyc"
@@ -181,6 +181,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit and Consult" />
+
+        <Button
+            android:id="@+id/btnbck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BACK" />
 
     </LinearLayout>
 

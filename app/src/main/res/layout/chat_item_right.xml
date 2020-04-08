@@ -20,7 +20,6 @@
         android:id="@+id/show_message"
         android:padding="10dp"
         android:layout_margin="10sp"
-
         android:layout_alignParentRight="true" />
 
     </RelativeLayout>
