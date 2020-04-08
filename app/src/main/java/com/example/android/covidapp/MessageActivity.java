@@ -14,6 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,7 +25,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class MessageActivity extends AppCompatActivity {
 
@@ -33,6 +37,11 @@ public class MessageActivity extends AppCompatActivity {
 
     FirebaseUser fuser;
     DatabaseReference reference;
+
+    MessageAdapt messageAdapt;
+    List<Chatdbm> chatdbms;
+
+    RecyclerView recyclerView;
 
     Intent intent;
 
@@ -50,6 +59,14 @@ public class MessageActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        recyclerView=findViewById(R.id.review);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getApplicationContext());
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
         usname=findViewById(R.id.txtusername);
         send=findViewById(R.id.btnsend);
         message=findViewById(R.id.txtsend);
@@ -84,6 +101,7 @@ public class MessageActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Users u=dataSnapshot.getValue(Users.class);
                 usname.setText(u.getUsername());
+                readMessage(fuser.getUid(),userid);
             }
 
             @Override
@@ -105,5 +123,34 @@ public class MessageActivity extends AppCompatActivity {
         reference.child("Chats").push().setValue(hashMap);
 
 
+    }
+
+    private void readMessage(final String myid, final String userid)
+    {
+        chatdbms=new ArrayList<>();
+
+
+        reference=FirebaseDatabase.getInstance().getReference("Chats");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                chatdbms.clear();
+                for(DataSnapshot snapshot:dataSnapshot.getChildren()){
+                    Chatdbm ch=snapshot.getValue(Chatdbm.class);
+                    if(ch.getReciever().equals(myid) && ch.getSender().equals(userid) || ch.getReciever().equals(userid) && ch.getSender().equals(myid))
+                    {
+                        chatdbms.add(ch);
+
+                    }
+                    messageAdapt=new MessageAdapt(MessageActivity.this, (ArrayList<Chatdbm>) chatdbms);
+                    recyclerView.setAdapter(messageAdapt);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 }
