@@ -18,6 +18,7 @@
         <activity android:name=".CitizenLogin" />
         <activity android:name=".CitizenRegister" />
         <activity android:name=".page" />
+        <activity android:name=".CitizenLoginOrRegister"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
