@@ -39,7 +39,7 @@ public class MessageActivity extends AppCompatActivity {
     DatabaseReference reference;
 
     MessageAdapt messageAdapt;
-    List<Chatdbm> chatdbms;
+    ArrayList<Chatdbm> chatdbms;
 
     RecyclerView recyclerView;
 
@@ -142,7 +142,7 @@ public class MessageActivity extends AppCompatActivity {
                         chatdbms.add(ch);
 
                     }
-                    messageAdapt=new MessageAdapt(MessageActivity.this, (ArrayList<Chatdbm>) chatdbms);
+                    messageAdapt=new MessageAdapt(MessageActivity.this, chatdbms);
                     recyclerView.setAdapter(messageAdapt);
                 }
             }
