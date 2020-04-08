@@ -31,7 +31,8 @@
         android:layout_width="325dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="phone"
+        android:maxLength="10"
+        android:inputType="number"
         android:orientation="horizontal" />
 
     <Button

@@ -46,9 +46,12 @@ public class actvityDetails extends AppCompatActivity {
 
 
                 patient.setName(dname.getText().toString().trim());
+                
                 patient.setHospitalname(hospitalNmae.getText().toString().trim());
                 int agee=Integer.parseInt(dage.getText().toString().trim());
                 Long phn=Long.parseLong(dcontact.getText().toString().trim());
+
+
                 patient.setAge(agee);
                 patient.setPhone(phn);
                 String gender="";
