@@ -3,6 +3,7 @@ package com.example.android.covidapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.content.Intent;
@@ -20,7 +21,7 @@ public class actvityDetails extends AppCompatActivity {
     EditText dname,dage,dtravel,dresp,dphyc,dcontact,dgender,hospitalNmae;
     RadioButton dmale,dfemale;
     RadioGroup radio;
-    Button btnnext;
+    Button btnnext,btnbck;
     DatabaseReference reff;
     Patient patient;
     @Override
@@ -46,12 +47,24 @@ public class actvityDetails extends AppCompatActivity {
 
 
                 patient.setName(dname.getText().toString().trim());
-                
+
                 patient.setHospitalname(hospitalNmae.getText().toString().trim());
                 int agee=Integer.parseInt(dage.getText().toString().trim());
                 Long phn=Long.parseLong(dcontact.getText().toString().trim());
 
 
+                if( TextUtils.isEmpty(dname.getText())) {
+
+                    dname.setError("Name is required!");
+                    return;
+
+                }
+
+                if(TextUtils.isEmpty(dcontact.getText()))
+                {
+                    Toast.makeText(actvityDetails.this,"You need to enter phone number!",Toast.LENGTH_SHORT).show();
+                     return;
+                }
                 patient.setAge(agee);
                 patient.setPhone(phn);
                 String gender="";
@@ -71,9 +84,26 @@ public class actvityDetails extends AppCompatActivity {
 
                 reff.push().setValue(patient);
                 Toast.makeText(actvityDetails.this,"Your Value is Added",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(actvityDetails.this,afterSubmit.class);
+                startActivity(intent);
+
+
 
             }
         });
+
+        btnbck=(Button)findViewById(R.id.btnbck);
+        btnbck.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(actvityDetails.this,NearByHospitals.class);
+                startActivity(intent);
+
+            }
+        });
+
+
 
 
     }
