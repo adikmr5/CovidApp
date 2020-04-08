@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.FileDescriptor;
@@ -24,19 +23,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void citizen(View view){
-
-        Intent activity2Intent = new Intent(getApplicationContext(), page.class);
+        Intent activity2Intent = new Intent(getApplicationContext(), CitizenLoginOrRegister.class);
         startActivity(activity2Intent);
         FirebaseAuth.getInstance().signOut();
-
-
-
     }
 
     public void police(View view){
         Intent i=new Intent(getApplicationContext(), police.class);
         startActivity(i);
-
 
     }
 
@@ -46,10 +40,5 @@ public class MainActivity extends AppCompatActivity {
         Intent j=new Intent(getApplicationContext(), Report.class);
         startActivity(j);
     }
-
-
-
-
-
 
 }

@@ -30,40 +30,40 @@ public class CitizenLogin extends AppCompatActivity {
         setContentView(R.layout.activity_citizen_login);
 
         email=findViewById(R.id.etmail);
-        password=findViewById(R.id.etpass);
-        login=findViewById(R.id.loginbut);
+    password=findViewById(R.id.etpass);
+    login=findViewById(R.id.loginbut);
 
-        auth=FirebaseAuth.getInstance();
+    auth=FirebaseAuth.getInstance();
 
         login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String txt_email=email.getText().toString();
-                String txt_password=password.getText().toString();
+        @Override
+        public void onClick(View v) {
+            String txt_email=email.getText().toString();
+            String txt_password=password.getText().toString();
 
-                if(TextUtils.isEmpty(txt_email)||TextUtils.isEmpty(txt_password))
-                {
-                    Toast.makeText(CitizenLogin.this,"please enter the required fields",Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    auth.signInWithEmailAndPassword(txt_email,txt_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful())
-                            {
-                                Intent g=new Intent(CitizenLogin.this,Citizen.class);
-                                startActivity(g);
-                                finish();
-                            }
-                            else
-                            {
-                                Toast.makeText(CitizenLogin.this,"Authentication Failed!!!",Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
-                }
+            if(TextUtils.isEmpty(txt_email)||TextUtils.isEmpty(txt_password))
+            {
+                Toast.makeText(CitizenLogin.this,"please enter the required fields",Toast.LENGTH_SHORT).show();
             }
-        });
-    }
+            else
+            {
+                auth.signInWithEmailAndPassword(txt_email,txt_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful())
+                        {
+                            Intent g=new Intent(CitizenLogin.this,Citizen.class);
+                            startActivity(g);
+                            finish();
+                        }
+                        else
+                        {
+                            Toast.makeText(CitizenLogin.this,"Authentication Failed!!!",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            }
+        }
+    });
+}
 }
