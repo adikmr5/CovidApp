@@ -38,6 +38,8 @@
         android:layout_marginTop="40sp"
         android:layout_marginBottom="50sp"
         android:text="DONE"
+        android:textStyle="bold"
+        android:background="@color/quantum_vanillagreen500"
         android:layout_centerHorizontal="true"
         />
 
@@ -53,5 +55,7 @@
         android:id="@+id/btnback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GO BACK" />
+        android:text="GO BACK"
+        android:textStyle="bold"
+        android:background="@color/quantum_vanillared900"/>
 </LinearLayout>

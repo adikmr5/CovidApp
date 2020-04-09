@@ -22,5 +22,7 @@
         android:layout_height="106dp"
         android:text="Click Here To See Complains"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"/>
+        android:layout_marginTop="300dp"
+        android:background="@color/quantum_vanillagreen500"
+        android:textStyle="bold"/>
 </RelativeLayout>

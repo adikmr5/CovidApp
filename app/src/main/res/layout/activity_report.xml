@@ -68,7 +68,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.402"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etlocal" />
+        app:layout_constraintTop_toBottomOf="@+id/etlocal"
+        android:textStyle="bold"
+        android:background="@color/quantum_vanillagreen500"/>
 
 
 

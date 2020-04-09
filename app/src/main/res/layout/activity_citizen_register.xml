@@ -72,6 +72,8 @@
         android:id="@+id/regbut"
         android:layout_below="@+id/field_ll"
         android:layout_centerHorizontal="true"
+        android:background="@color/quantum_vanillagreen500"
+        android:textStyle="bold"
         ></Button>
 
 

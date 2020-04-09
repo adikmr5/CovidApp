@@ -10,6 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_marginTop="566dp"
         />
     <Button
         android:layout_width="wrap_content"
@@ -17,7 +18,10 @@
         android:layout_marginLeft="300dp"
         android:id="@+id/btnc"
         android:text="back"
-        android:textStyle="bold"/>
+        android:layout_marginTop="570dp"
+        android:background="@color/quantum_vanillagreen500"
+        android:textStyle="bold"
+        />
 
 
 
@@ -25,7 +29,7 @@
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="45dp"
+
         />
 
 

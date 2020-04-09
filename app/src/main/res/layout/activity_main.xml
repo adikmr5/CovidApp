@@ -21,6 +21,8 @@
             android:layout_weight="1"
             android:onClick="citizen"
             android:text="for citizen"
+            android:background="@color/quantum_vanillagreen500"
+            android:textStyle="bold"
 
             ></Button>
 
@@ -30,7 +32,9 @@
             android:layout_margin="20dp"
             android:layout_weight="1"
             android:onClick="police"
-            android:text="for Police"></Button>
+            android:text="for Police"
+            android:background="@color/quantum_vanillared500"
+            android:textStyle="bold"></Button>
 
 
 

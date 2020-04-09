@@ -44,6 +44,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:text="Call Helpline"
+            android:background="@color/quantum_vanillared500"
+            android:textStyle="bold"
         android:onClick="call"
         />
 
@@ -56,7 +58,10 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:text="back"
+        android:background="@color/quantum_vanillagreen500"
+        android:textStyle="bold"
         android:onClick="back"
+
         />
 
         <LinearLayout
@@ -77,6 +82,9 @@
                 android:layout_height="130dp"
                 android:onClick="nearbyHospital"
                 android:text="I HAVE SYMPTOMS"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@color/quantum_vanillared500"
+                android:textStyle="bold"
                 android:textSize="14sp" />
 
             <Button
@@ -85,8 +93,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:onClick="nearbyHospital"
-                android:text="CHAT WITH MEDICAL
-                REPRESENTATIVE"
+                android:text="CHAT WITH MEDICAL\n REPRESENTATIVE"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@color/quantum_vanillagreen500"
+                android:textStyle="bold"
                 android:textSize="14sp" />
 
 
@@ -96,6 +106,9 @@
                 android:layout_height="125dp"
                 android:text="Report for hidden patients/unwanted
                  gatherings"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@color/quantum_vanillared500"
+                android:textStyle="bold"
                 android:textSize="14sp" />
         </LinearLayout>
 

@@ -54,6 +54,8 @@
     android:layout_height="wrap_content"
     android:text="Login"
     android:id="@+id/loginbut"
+    android:textStyle="bold"
+    android:background="@color/quantum_vanillagreen500"
     android:layout_below="@+id/field_ll"
     android:layout_centerHorizontal="true"
     ></Button>
@@ -65,5 +67,7 @@
         android:id="@+id/regbuttononmainpage"
         android:layout_below="@+id/loginbut"
         android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:background="@color/quantum_vanillared500"
         ></Button>
 </RelativeLayout>

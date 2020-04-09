@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".NearByHospitals">
 
-    <fragment
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-/>
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,33 +15,53 @@
 
         />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="show hospitals near me"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100sp"
-        />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="213dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50sp"
-        android:text="GO TO FORM" />
 
-    <Button
-        android:id="@+id/buttonback"
-        android:layout_width="213dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="0sp"
-        android:text="Back" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100sp"
+
+            android:onClick="onClick"
+            android:text="show hospitals near me"
+            android:textStyle="bold"
+
+            />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="213dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginBottom="50sp"
+
+            android:text="GO TO FORM"
+
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonback"
+            android:layout_width="213dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginBottom="0sp"
+
+            android:text="Back"
+            android:textStyle="bold" />
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
 
 </RelativeLayout>
