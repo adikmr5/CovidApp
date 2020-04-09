@@ -40,6 +40,7 @@
         android:layout_width="183dp"
         android:layout_height="77dp"
         android:text="LOGIN"
+        android:background="#d4c3cf"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.364"

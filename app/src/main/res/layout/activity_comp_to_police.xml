@@ -19,7 +19,7 @@
         android:id="@+id/btnc"
         android:text="back"
         android:layout_marginTop="570dp"
-        android:background="@color/quantum_vanillagreen500"
+        android:background="#b8a9c9"
         android:textStyle="bold"
         />
 

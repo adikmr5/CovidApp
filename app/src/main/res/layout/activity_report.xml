@@ -70,7 +70,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etlocal"
         android:textStyle="bold"
-        android:background="@color/quantum_vanillagreen500"/>
+        android:background="#d6cbd3"/>
 
 
 

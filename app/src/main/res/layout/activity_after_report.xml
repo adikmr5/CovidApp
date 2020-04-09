@@ -23,7 +23,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="18dp"
         android:textStyle="bold"
-        android:background="@color/quantum_vanillagreen500"
+        android:background="#d4c3cf"
         android:id="@+id/btnb"/>
 
 </RelativeLayout>

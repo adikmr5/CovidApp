@@ -181,7 +181,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit and Consult"
-        android:background="@color/quantum_vanillagreen500"
+        android:background="#d4c3cf"
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:textStyle="bold"/>
 
@@ -191,7 +191,7 @@
             android:layout_height="wrap_content"
             android:text="BACK"
             android:layout_margin="@dimen/activity_horizontal_margin"
-            android:background="@color/quantum_vanillagreen500"
+            android:background="#eca1a6"
             android:textStyle="bold"/>
 
     </LinearLayout>

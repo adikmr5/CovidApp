@@ -39,7 +39,7 @@
         android:layout_marginBottom="50sp"
         android:text="DONE"
         android:textStyle="bold"
-        android:background="@color/quantum_vanillagreen500"
+        android:background="#d4c3cf"
         android:layout_centerHorizontal="true"
         />
 
@@ -57,5 +57,5 @@
         android:layout_height="wrap_content"
         android:text="GO BACK"
         android:textStyle="bold"
-        android:background="@color/quantum_vanillared900"/>
+        android:background="#eca1a6"/>
 </LinearLayout>

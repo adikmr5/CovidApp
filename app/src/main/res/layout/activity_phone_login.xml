@@ -42,7 +42,7 @@
         android:layout_marginTop="50sp"
         android:text="VERIFY"
         android:textStyle="bold"
-        android:background="@color/quantum_vanillagreen500"/>
+        android:background="#d4c3cf"/>
 
 
 

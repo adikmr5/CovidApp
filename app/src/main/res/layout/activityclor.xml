@@ -55,7 +55,7 @@
     android:text="Login"
     android:id="@+id/loginbut"
     android:textStyle="bold"
-    android:background="@color/quantum_vanillagreen500"
+    android:background="#eca1a6"
     android:layout_below="@+id/field_ll"
     android:layout_centerHorizontal="true"
     ></Button>
@@ -68,6 +68,6 @@
         android:layout_below="@+id/loginbut"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
-        android:background="@color/quantum_vanillared500"
+        android:background="#d6cbd3"
         ></Button>
 </RelativeLayout>

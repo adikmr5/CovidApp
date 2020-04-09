@@ -58,7 +58,7 @@
         android:layout_height="48dp"
         android:text="AUTHENTICATE"
         android:textStyle="bold"
-        android:background="@color/quantum_vanillagreen500"
+        android:background="#d6cbd3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="440dp"/>
 

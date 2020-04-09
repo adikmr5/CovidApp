@@ -7,12 +7,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
+
+        <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/quantum_googgreenA700"
-        />
+            android:background="#588c7e" />
     <TextView
         android:id="@+id/txt"
         android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:text="Call Helpline"
-            android:background="@color/quantum_vanillared500"
+            android:background="#d4c3cf"
             android:textStyle="bold"
         android:onClick="call"
         />
@@ -58,7 +58,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:text="back"
-        android:background="@color/quantum_vanillagreen500"
+        android:background="#d4c3cf"
         android:textStyle="bold"
         android:onClick="back"
 
@@ -83,7 +83,7 @@
                 android:onClick="nearbyHospital"
                 android:text="I HAVE SYMPTOMS"
                 android:layout_margin="@dimen/activity_horizontal_margin"
-                android:background="@color/quantum_vanillared500"
+                android:background="#d4c3cf"
                 android:textStyle="bold"
                 android:textSize="14sp" />
 
@@ -95,7 +95,7 @@
                 android:onClick="nearbyHospital"
                 android:text="CHAT WITH MEDICAL\n REPRESENTATIVE"
                 android:layout_margin="@dimen/activity_horizontal_margin"
-                android:background="@color/quantum_vanillagreen500"
+                android:background="#eca1a6"
                 android:textStyle="bold"
                 android:textSize="14sp" />
 
@@ -107,7 +107,7 @@
                 android:text="Report for hidden patients/unwanted
                  gatherings"
                 android:layout_margin="@dimen/activity_horizontal_margin"
-                android:background="@color/quantum_vanillared500"
+                android:background="#d4c3cf"
                 android:textStyle="bold"
                 android:textSize="14sp" />
         </LinearLayout>
