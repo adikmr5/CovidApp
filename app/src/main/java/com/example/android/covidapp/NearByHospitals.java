@@ -60,6 +60,7 @@ public class NearByHospitals extends AppCompatActivity implements OnMapReadyCall
     private double latitude, longitude;
     private final float DEFAULT_ZOOM = 18;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
