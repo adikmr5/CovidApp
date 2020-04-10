@@ -14,22 +14,95 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".AfterReport"></activity>
-        <activity android:name=".afterSubmit" />
-        <activity android:name=".MessageActivity" />
-        <activity android:name=".Chat" />
+        <activity android:name=".afterSubmit" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+
+        <activity android:name=".MessageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Citizen" />
+        </activity>
+
+
+        <activity android:name=".Chat" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Citizen" />
+        </activity>
+
+
         <activity android:name=".CitizenLogin" />
-        <activity android:name=".CitizenRegister" />
-        <activity android:name=".page" />
-        <activity android:name=".CitizenLoginOrRegister" />
-        <activity android:name=".NearByHospitals" />
-        <activity android:name=".Citizen" />
-        <activity android:name=".CompToPolice" />
-        <activity android:name=".Report" />
-        <activity android:name=".Helping" />
-        <activity android:name=".police" />
-        <activity android:name=".actvityDetails" />
-        <activity android:name=".phoneVerify" />
-        <activity android:name=".phoneLogin" />
+
+        <activity android:name=".CitizenRegister" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name=".page" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name=".CitizenLoginOrRegister">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name=".NearByHospitals">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".Citizen" />
+        </activity>
+
+
+        <activity android:name=".Citizen">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" /></activity>
+
+        <activity android:name=".CompToPolice">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".Citizen" />
+        </activity>
+        <activity android:name=".Report">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+    </activity>
+        <activity android:name=".Helping">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".police" />
+    </activity>
+        <activity android:name=".police" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".actvityDetails"
+            android:parentActivityName=".Citizen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NearByHospitals" />
+        </activity>
+        <activity android:name=".phoneVerify" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Citizen" />
+        </activity>
+        <activity android:name=".phoneLogin" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".phoneVerify" />
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

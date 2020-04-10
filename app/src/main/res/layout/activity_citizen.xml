@@ -50,23 +50,9 @@
         />
 
 
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:text="back"
-        android:background="#d4c3cf"
-        android:textStyle="bold"
-        android:onClick="back"
-
-        />
-
-        <LinearLayout
+    <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="400dp"
             android:orientation="vertical"
             android:layout_gravity="center_vertical"
             android:layout_centerVertical="true"
@@ -79,7 +65,8 @@
 
                 android:id="@+id/nearHospital"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:onClick="nearbyHospital"
                 android:text="I HAVE SYMPTOMS"
                 android:layout_margin="@dimen/activity_horizontal_margin"
@@ -91,7 +78,8 @@
 
                 android:id="@+id/chat"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:onClick="nearbyHospital"
                 android:text="CHAT WITH MEDICAL\n REPRESENTATIVE"
                 android:layout_margin="@dimen/activity_horizontal_margin"
@@ -103,7 +91,8 @@
             <Button
                 android:id="@+id/btnrepo"
                 android:layout_width="321dp"
-                android:layout_height="125dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:text="Report for hidden patients/unwanted
                  gatherings"
                 android:layout_margin="@dimen/activity_horizontal_margin"

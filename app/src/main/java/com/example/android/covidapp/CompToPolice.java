@@ -32,15 +32,9 @@ public class CompToPolice extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comp_to_police);
-        btn=findViewById(R.id.btnc);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i =new Intent(CompToPolice.this,MainActivity.class);
-                startActivity(i);
-            }
-        });
+
+
 
         recyclerView = findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

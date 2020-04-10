@@ -14,16 +14,25 @@
         android:translationY="-12dp"
 
         />
-
-
-
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="20dp"
+    >
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="100sp"
+
+
             android:background="#d6cbd3"
             android:onClick="onClick"
             android:text="show hospitals near me"
@@ -31,36 +40,23 @@
 
             />
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="510dp"
-            android:layout_centerHorizontal="true"
-            android:background="#d6cbd3"
-            android:layout_marginBottom="50sp"
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="50sp"
+        android:background="#d6cbd3"
 
-            android:text="GO TO FORM"
+        android:text="GO TO FORM"
 
-            android:textStyle="bold" />
+        android:textStyle="bold" />
+</LinearLayout>
 
-        <Button
-            android:id="@+id/buttonback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
 
-            android:background="#d6cbd3"
-            android:layout_marginBottom="0sp"
 
-            android:text="Back"
-            android:textStyle="bold" />
-
-        <fragment
-            android:id="@+id/map"
-            android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
 
 
 
